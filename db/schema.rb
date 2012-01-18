@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20120118170607) do
     t.string   "titel"
     t.text     "formal"
     t.integer  "user_id"
-    t.integer  "dato"
+    t.string   "dato"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

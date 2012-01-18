@@ -1,25 +1,23 @@
-<h1>Listing aktivitets</h1>
+<h1>Did it today</h1>
 
-<table>
-  <tr>
-    <th>Titel</th>
-    <th>Formal</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @aktivitets.each do |aktivitet| %>
-  <tr>
-    <td><%= aktivitet.titel %></td>
-    <td><%= aktivitet.formal %></td>
-    <td><%= link_to 'Show', aktivitet %></td>
-    <td><%= link_to 'Edit', edit_aktivitet_path(aktivitet) %></td>
-    <td><%= link_to 'Destroy', aktivitet, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<%= form_for(@aktivitets) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :titel %><br />
+    <%= f.text_field :titel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :formal %><br />
+    <%= f.text_area :formal, :rows => 8 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
-</table>
 
-<br />
 
 <%= link_to 'New Aktivitet', new_aktivitet_path %>

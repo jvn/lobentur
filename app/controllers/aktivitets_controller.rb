@@ -2,17 +2,18 @@ class AktivitetsController < ApplicationController
   # GET /aktivitets
   # GET /aktivitets.json
   def index
-    #if @current_user.aktivitets != nil
-    #@aktivitets = @current_user.aktivitets
-    #else
+    if current_user.aktivitet != nil
+    @aktivitets = current_user.aktivitet
+    else
       #redirect_to new_aktivitet_path
-    #end
-    @aktivitets = Aktivitet.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @aktivitets }
     end
+    #@aktivitets = Aktivitet.all
+    #@aktivitets = current_user.aktivitet
+
+    #respond_to do |format|
+      #format.html # index.html.erb
+      #format.json { render json: @aktivitets }
+   #end
   end
 
   # GET /aktivitets/1
@@ -46,6 +47,7 @@ class AktivitetsController < ApplicationController
   # POST /aktivitets.json
   def create
     @aktivitet = Aktivitet.new(params[:aktivitet])
+    @aktivitet.user_id = current_user.id
 
     respond_to do |format|
       if @aktivitet.save
