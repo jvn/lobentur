@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Lobentur::Application.config.secret_token = 'c417ac5fde559650ccc78a47d1ce1115e22999a4205f53ed7e27a6a139aa080112055bc82914a3f459741e3ba671c2afc6f6aeb2300d92a6d6b3d1d379812e6f'
+Auth::Application.config.secret_token = '6bd9d442f120781f7c568efd2d06cd174e12b88d45f52a8e14ab922a2a8910b38eedeb0a8097502e82c8e1468f3113eed160d1d9f2ff1edfdda80c89b5902412'
