@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="padding-top: 40px;">
 
 <div id="user_nav">
   <% if current_user %>
@@ -19,7 +19,9 @@
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-<%= yield %>
+<div class="container">
+    <%= yield %>
+</div>
 
 </body>
 </html>
