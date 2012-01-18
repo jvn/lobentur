@@ -1,23 +1,41 @@
 <h1>Did it today</h1>
 
+<div title="Half and half" class="row show-grid">
+    <div class="span8">
+      <%= form_for(@aktivitets) do |f| %>
 
-<%= form_for(@aktivitets) do |f| %>
+
+          <div class="field">
+            <%= f.label :titel %><br />
+            <%= f.text_field :titel %>
+          </div>
+
+          <div class="field">
+            <%= f.label :formal %><br />
+            <%= f.text_area :formal, :rows => 8 %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+      <% end %>
+    </div>
+    <div class="span8">
+     <table>
+       <th>dato</th>
+       <th>gjort det?</th>
 
 
-  <div class="field">
-    <%= f.label :titel %><br />
-    <%= f.text_field :titel %>
+       <% @dato = 0 %>
+
+       <% 6.times do %>
+           <% @dato=@dato +1 %>
+           <tr>
+            <td>d. 0<%= @dato %>/01/2012</td>
+            <td><input type="checkbox" name="tag_ids[]" value="1" /></td>
+           </tr>
+       <% end %>
+     </table>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :formal %><br />
-    <%= f.text_area :formal, :rows => 8 %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-
-<%= link_to 'New Aktivitet', new_aktivitet_path %>

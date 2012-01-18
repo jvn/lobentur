@@ -5,7 +5,7 @@ class AktivitetsController < ApplicationController
     if current_user.aktivitet != nil
     @aktivitets = current_user.aktivitet
     else
-      #redirect_to new_aktivitet_path
+      redirect_to new_aktivitet_path
     end
     #@aktivitets = Aktivitet.all
     #@aktivitets = current_user.aktivitet
@@ -19,12 +19,13 @@ class AktivitetsController < ApplicationController
   # GET /aktivitets/1
   # GET /aktivitets/1.json
   def show
+    redirect_to aktivitets_path
     @aktivitet = Aktivitet.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @aktivitet }
-    end
+    #respond_to do |format|
+      #format.html # show.html.erb
+      #format.json { render json: @aktivitet }
+    #end
   end
 
   # GET /aktivitets/new
