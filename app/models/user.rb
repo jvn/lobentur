@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_one :aktivitet
   attr_accessible :email, :password, :password_confirmation
   
   attr_accessor :password

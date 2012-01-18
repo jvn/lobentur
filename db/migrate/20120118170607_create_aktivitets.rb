@@ -3,6 +3,7 @@ class CreateAktivitets < ActiveRecord::Migration
     create_table :aktivitets do |t|
       t.string :titel
       t.text :formal
+      t.integer :user_id
 
       t.timestamps
     end
