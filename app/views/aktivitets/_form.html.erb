@@ -23,9 +23,12 @@
     <%= f.label :dato %><br />
     <%= f.text_field :dato %>
   </div>
-    <%= check_box_tag(:gjort) %>
-    <%= label_tag(:gjort, "Jeg er færdig") %>
+    <input type="checkbox" name="tag_ids[]" value="1" />
+    <input type="checkbox" name="tag_ids[]" value="2" />
+    <input type="checkbox" name="tag_ids[]" value="3" />
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
