@@ -23,6 +23,8 @@
     <%= f.label :dato %><br />
     <%= f.text_field :dato %>
   </div>
+    <%= check_box_tag(:gjort) %>
+    <%= label_tag(:gjort, "Jeg er færdig") %>
      <div class="actions">
     <%= f.submit %>
   </div>
