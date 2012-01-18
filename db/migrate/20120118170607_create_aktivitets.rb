@@ -4,6 +4,7 @@ class CreateAktivitets < ActiveRecord::Migration
       t.string :titel
       t.text :formal
       t.integer :user_id
+      t.string :dato
 
       t.timestamps
     end
