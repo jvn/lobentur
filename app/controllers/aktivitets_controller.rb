@@ -2,6 +2,11 @@ class AktivitetsController < ApplicationController
   # GET /aktivitets
   # GET /aktivitets.json
   def index
+    #if @current_user.aktivitets != nil
+    #@aktivitets = @current_user.aktivitets
+    #else
+      #redirect_to new_aktivitet_path
+    #end
     @aktivitets = Aktivitet.all
 
     respond_to do |format|

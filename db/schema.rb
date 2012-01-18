@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20120118170607) do
   create_table "aktivitets", :force => true do |t|
     t.string   "titel"
     t.text     "formal"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
