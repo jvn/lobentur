@@ -1,4 +1,4 @@
-<h1>Log in</h1>
+<h1>Did it today</h1>
 
 <%= form_tag sessions_path do %>
   <p>
@@ -11,5 +11,7 @@
   </p>
   <p class="button"><%= submit_tag "Log in" %></p>
 <% end %>
+
+<%= link_to 'opret dig som bruger', sign_up_path %>
 
 
