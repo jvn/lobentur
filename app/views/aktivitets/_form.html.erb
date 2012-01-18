@@ -1,0 +1,25 @@
+<%= form_for(@aktivitet) do |f| %>
+  <% if @aktivitet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aktivitet.errors.count, "error") %> prohibited this aktivitet from being saved:</h2>
+
+      <ul>
+      <% @aktivitet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titel %><br />
+    <%= f.text_field :titel %>
+  </div>
+  <div class="field">
+    <%= f.label :formal %><br />
+    <%= f.text_area :formal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

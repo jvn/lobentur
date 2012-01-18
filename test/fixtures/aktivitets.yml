@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  titel: MyString
+  formal: MyText
+
+two:
+  titel: MyString
+  formal: MyText

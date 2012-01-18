@@ -1,4 +1,6 @@
 Auth2::Application.routes.draw do
+  resources :aktivitets
+
   get "sessions/new"
 
   get "users/new"

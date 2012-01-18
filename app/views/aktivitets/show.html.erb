@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titel:</b>
+  <%= @aktivitet.titel %>
+</p>
+
+<p>
+  <b>Formal:</b>
+  <%= @aktivitet.formal %>
+</p>
+
+
+<%= link_to 'Edit', edit_aktivitet_path(@aktivitet) %> |
+<%= link_to 'Back', aktivitets_path %>
